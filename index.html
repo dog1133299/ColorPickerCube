@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Color Picker Cube</title>
+ 	<link rel="stylesheet" type="text/css" href="css/style.css">
+ </head>
+ <body>
+ <div class="box">
+<div class="top">
+	<div class="topChild t1" id="1"></div>
+	<div class="topChild t2" id="2"></div>
+	<div class="topChild t3" id="3"></div>
+	<div class="topChild t4" id="4"></div>
+	<div class="topChild t5" id="5"></div>
+	<div class="topChild t6" id="6"></div>
+	<div class="topChild t7" id="7"></div>
+	<div class="topChild t8" id="8"></div>
+	<div class="topChild t9" id="9"></div>
+	<div class="topChild t10" id="10"></div>
+	<div class="topChild t11" id="11"></div>
+	<div class="topChild t12" id="12"></div>
+	<div class="topChild t13" id="13"></div>
+	<div class="topChild t14" id="14"></div>
+	<div class="topChild t15" id="15"></div>
+	<div class="topChild t16" id="16"></div>
+	<div class="topChild t17" id="17"></div>
+	<div class="topChild t18" id="18"></div>
+	<div class="topChild t19" id="19"></div>
+	<div class="topChild t20" id="20"></div>
+	<div class="topChild t21" id="21"></div>
+	<div class="topChild t22" id="22"></div>
+	<div class="topChild t23" id="23"></div>
+	<div class="topChild t24" id="24"></div>
+	<div class="topChild t25" id="25"></div>
+</div>
+<div class="left">
+	<div class="leftChild l1"></div> 
+	<div class="leftChild l2"></div> 
+	<div class="leftChild l3"></div> 
+	<div class="leftChild l4"></div>  
+	<div class="leftChild l5"></div>  
+</div>
+<div class="right">
+	<div class="rightChild r1"></div>
+	<div class="rightChild r2"></div>
+	<div class="rightChild r3"></div>
+	<div class="rightChild r4"></div>
+	<div class="rightChild r5"></div>
+</div>
+</div>
+
+<div class="msg">
+	<div class="blackText">Blcak Text</div>
+	<div class="whiteText">White Text</div>
+	<span>#ffccff rgb(255, 204, 255) hsl(300, 100%, 90%)</span>
+</div>
+
+
+<script type="text/javascript">
+ var tops=document.querySelectorAll('.topChild');
+ var color={
+ 	1:"#75a3a3 rgb(117, 163, 163) hsl(180, 20%, 55%)",
+ 	2:"#ddccff rgb(221, 204, 255) hsl(260, 100%, 90%)",
+ 	3:"#66e0ff rgb(102, 224, 255) hsl(192, 100%, 70%) ",
+ 	4:"#ffbf00 rgb(255, 191, 0) hsl(45, 100%, 50%)",
+ 	5:"#ff9999 rgb(255, 153, 153) hsl(0, 100%, 80%)",
+ 	6:"#ff99ff rgb(255, 153, 255) hsl(300, 100%, 80%)",
+ 	7:"#d279a6 rgb(210, 121, 166) hsl(330, 50%, 65%)",
+ 	8:"#b3ff99 rgb(179, 255, 153) hsl(105, 100%, 80%)",
+ 	9:"#98e698 rgb(152, 230, 152) hsl(120, 61%, 75%)",
+ 	10:"#79d279 rgb(121, 210, 121) hsl(120, 50%, 65%)",
+ 	11:"#ff80bf rgb(255, 128, 191) hsl(330, 100%, 75%)",
+ 	12:"#d9ff66 rgb(217, 255, 102) hsl(75, 100%, 70%)",
+ 	13:"#66c2ff rgb(102, 194, 255) hsl(204, 100%, 70%)",
+ 	14:"#ffff80 rgb(255, 255, 128) hsl(60, 100%, 75%)",
+ 	15:"#ff9980 rgb(255, 153, 128) hsl(12, 100%, 75%)",
+ 	16:"#70dbdb rgb(112, 219, 219) hsl(180, 60%, 65%)",
+ 	17:"#ffcc66 rgb(255, 204, 102) hsl(40, 100%, 70%)",
+ 	18:"#ffccff rgb(255, 204, 255) hsl(300, 100%, 90%)",
+ 	19:"#bf80ff rgb(191, 128, 255) hsl(270, 100%, 75%)",
+ 	20:"#cc6666 rgb(204, 102, 102) hsl(0, 50%, 60%)",
+ 	21:"#84e184 rgb(132, 225, 132) hsl(120, 61%, 70%)",
+ 	22:"#ff8080 rgb(255, 128, 128) hsl(0, 100%, 75%)",
+ 	23:"#f0c1e1 rgb(240, 193, 225) hsl(319, 61%, 85%)",
+ 	24:"#9999ff rgb(153, 153, 255) hsl(240, 100%, 80%)",
+ 	25:"#99ccff rgb(153, 204, 255) hsl(210, 100%, 80%)",
+ }
+
+ for (var i = 0; i < tops.length; i++) {
+ 	tops[i].addEventListener("click",function () {
+
+ 		for (var k = 0; k < tops.length; k++) {
+ 			tops[k].style.zIndex=0;
+ 		}
+ 		tops[this.id-1].style.zIndex=1;
+ 		document.body.className="t"+this.id;
+ 		document.querySelector(".msg span").innerHTML=color[this.id];
+ 	})
+ }
+</script>
+ </body>
+ </html>
