@@ -200,3 +200,16 @@
 }
 .blackText {color: black;}
 .whiteText{color: white;}
+
+ .bottommsg{
+ 	width: 100%;
+ 	position: absolute;
+ 	bottom: 0;
+ 	color: white;
+ 	text-align: center;
+ 	font-family: 'Square721 BT','Montserrat', sans-serif;
+ 	font-size: 20px;
+ }
+ .bottommsg>a{
+ 	text-decoration: none; 
+ }
